@@ -44,7 +44,7 @@ int main(void) {
                             "I will convert it to signed decimal:");
                     scanf("%s", &inputs[0]);  // Input must be a string with 0/1
                     
-                    // Logic for Option 1: 8-bit signed conversion [cite: 10]
+                    
                     convert_binary_to_signed(inputs);
                     continue;
 
@@ -54,7 +54,7 @@ int main(void) {
                             "in binary, I will convert it to decimal");
                     scanf("%s", &inputs[0]);  // Input must be a string with 0/1
 
-                    // Logic for Option 2: 32-bit float conversion [cite: 13]
+                    
                     convert_binary_to_float(inputs);
                     continue;  
 
@@ -79,7 +79,7 @@ void convert_binary_to_signed(const char *binary) {
         }
     }
 
-    // Apply signed 8-bit logic: if input is 11111111, output -1 [cite: 11]
+  
     if (len == 8 && binary[0] == '1') {
         decimal -= 256;
     }
@@ -100,6 +100,7 @@ void convert_binary_to_float(const char *binary) {
         }
     }
 
-    // Displays decimal representation (e.g., -12.5 or 13.25) [cite: 15, 16]
+   
     printf("Floating Point Number: %f\n", data.f);
+
 }
