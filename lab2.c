@@ -79,7 +79,7 @@ void convert_binary_to_signed(const char *binary) {
         }
     }
 
-  
+  //signed 8 bit logic 
     if (len == 8 && binary[0] == '1') {
         decimal -= 256;
     }
@@ -93,15 +93,17 @@ void convert_binary_to_float(const char *binary) {
         float f;
     } data;
 
+	// Where bits are shifted into unsiged intger 
     data.u = 0;
     for (int i = 0; i < 32; i++) {
         if (binary[i] == '1') {
-            data.u |= (1U << (31 - i)); 
+            data.u |= (1U << (31 - i));  
         }
     }
 
-   
+   // Display
     printf("Floating Point Number: %f\n", data.f);
 
 }
+
 
