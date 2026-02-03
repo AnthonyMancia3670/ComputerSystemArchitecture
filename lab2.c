@@ -96,7 +96,7 @@ void convert_binary_to_float(const char *binary) {
     data.u = 0;
     for (int i = 0; i < 32; i++) {
         if (binary[i] == '1') {
-            data.u |= (1U << (31 - i)); // Shift bits into the unsigned integer
+            data.u |= (1U << (31 - i)); 
         }
     }
 
@@ -104,3 +104,4 @@ void convert_binary_to_float(const char *binary) {
     printf("Floating Point Number: %f\n", data.f);
 
 }
+
